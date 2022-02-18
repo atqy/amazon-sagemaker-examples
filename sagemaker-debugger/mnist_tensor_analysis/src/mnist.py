@@ -8,7 +8,8 @@ import mxnet as mx
 import numpy as np
 from mxnet import autograd, gluon, init
 from mxnet.gluon import nn
-from mxnet.gluon.data.vision import datasets, transforms
+from mxnet.gluon.data.vision import transforms
+from gluon_datasets import FashionMNIST
 
 
 def parse_args():
@@ -69,7 +70,7 @@ def train_model(batch_size, net, train_data, lr):
 
 
 def prepare_data(batch_size):
-    mnist_train = datasets.FashionMNIST(train=True)
+    mnist_train = FashionMNIST(train=True)
     transformer = transforms.Compose([transforms.ToTensor(), transforms.Normalize(0.286, 0.352)])
     mnist_train = mnist_train.transform_first(transformer)
     train_data = gluon.data.DataLoader(
