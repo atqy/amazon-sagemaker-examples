@@ -22,7 +22,9 @@ On SageMaker Studio, you will need to open a terminal, go to your home folder, t
 
 
 .. raw:: html
+
     <embed>
+        <h3>Search Tool</h3>
         <iframe style="width: 100%; height: 700px; border: none" src="http://sagemaker-example-search-page-v0.s3-website-us-west-2.amazonaws.com/"></iframe>
         <br />
         <br />
