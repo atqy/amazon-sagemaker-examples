@@ -7,7 +7,7 @@ Amazon SageMaker Example Notebooks
 
 .. image:: https://readthedocs.org/projects/sagemaker-examples-test-website/badge/?version=latest
 
-Welcome to Amazon SageMaker.
+Welcome to Amazon SageMaker. This is RTD Preview Testing Copy.
 This site highlights example Jupyter notebooks for a variety of machine learning use cases that you can run in SageMaker.
 
 This site is based on the `SageMaker Examples repository <https://github.com/aws/amazon-sagemaker-examples>`_ on GitHub.
