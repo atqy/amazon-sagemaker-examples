@@ -21,14 +21,11 @@ On SageMaker Studio, you will need to open a terminal, go to your home folder, t
    git clone https://github.com/aws/amazon-sagemaker-examples.git
 
 
-.. raw:: html
+.. toctree::
+   :maxdepth: 1
+   :caption: Advanced Search
 
-    <embed>
-        <h3>Search Tool</h3>
-        <iframe style="width: 100%; height: 700px; border: none" src="http://sagemaker-example-search-page-v0.s3-website-us-west-2.amazonaws.com/"></iframe>
-        <br />
-        <br />
-    </embed>
+   notebook_search/search
 
 
 .. toctree::
