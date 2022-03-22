@@ -28,6 +28,9 @@ Although most examples utilize key Amazon SageMaker functionality like distribut
 
 As of February 7, 2022, the default branch is named "main". See our [announcement](https://github.com/aws/amazon-sagemaker-examples/discussions/3131) for details and how to update your existing clone.
 
+<iframe style="width: 100%; height: 700px; border: none" src="http://sagemaker-example-search-page-v0.s3-website-us-west-2.amazonaws.com/"></iframe>
+
+
 ## :notebook: Examples
 
 ### Introduction to Ground Truth Labeling Jobs
