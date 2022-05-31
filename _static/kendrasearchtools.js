@@ -135,20 +135,22 @@ var KendraSearch = {
           listItem.append($('<a/>').attr('href', doc_url).html(doc_title));
           
           resHTML = '';
-          resHTML += text_excerpt.slice(0, text_excerpt_highlights[0]["BeginOffset"])
+          resHTML += text_excerpt.slice(0, text_excerpt_highlights[0]["BeginOffset"]).replaceAll(/\u00B6/g, "...")
           for(var j = 0; j < text_excerpt_highlights.length; j++){
-                resHTML += '<mark>';
-                resHTML += text_excerpt.slice(text_excerpt_highlights[j]["BeginOffset"], text_excerpt_highlights[j]["EndOffset"]);
+                resHTML += '<mark style="background-color: #ffe39c;">';
+                resHTML += text_excerpt.slice(text_excerpt_highlights[j]["BeginOffset"], text_excerpt_highlights[j]["EndOffset"]).replaceAll(/\u00B6/g, "...");
 
                 resHTML += '</mark>';
 
                 if( j + 1 == text_excerpt_highlights.length){
-                  resHTML += text_excerpt.slice(text_excerpt_highlights[j]["EndOffset"]);
+                  resHTML += text_excerpt.slice(text_excerpt_highlights[j]["EndOffset"]).replaceAll(/\u00B6/g, "...");
                 }else{
-                  resHTML += text_excerpt.slice(text_excerpt_highlights[j]["EndOffset"], text_excerpt_highlights[j+1]["BeginOffset"]);
+                  resHTML += text_excerpt.slice(text_excerpt_highlights[j]["EndOffset"], text_excerpt_highlights[j+1]["BeginOffset"]).replaceAll(/\u00B6/g, "...");
                 }
           }
+          console.log(resHTML);
           listItem.append($('<p/>').html(resHTML));
+          listItem.append($('<span/>').html(doc_url).css("color", "#969696").css("font-size", "0.80rem"));
 
           // listItem.innerHTML = resHTML;
           KendraSearch.output.append(listItem);
